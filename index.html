@@ -1,19 +1,6 @@
-<form method="POST" action="">
-  <fieldset>
-
-    <p>Your Name:<br>
-    <input type="text" size="48" name="name" value="<?PHP if(isset($_POST['name'])) echo htmlspecialchars($_POST['name']); ?>"></p>
-
-    <p>Email Address:<br>
-    <input type="email" size="48" name="email" value="<?PHP if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>"></p>
-
-    <p>Subject<br>
-    <input type="text" size="48" name="subject" value="<?PHP if(isset($_POST['subject'])) echo htmlspecialchars($_POST['subject']); ?>"></p>
-
-    <p>Enquiry:<br>
-    <textarea name="message" cols="48" rows="8"><?PHP if(isset($_POST['message'])) echo htmlspecialchars($_POST['message']); ?></textarea></p>
-
-    <p><input type="submit" name="sendfeedback" value="Send Message"></p>
-
-  </fieldset>
-</form>
+<form action=" " method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">

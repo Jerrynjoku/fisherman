@@ -4,18 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello, World!</title>
-  <link rel="stylesheet" href="/pyscript.css" />
-  <script defer src="/pyscript.js"></script>
-  <py-config>
-    - autoclose_loader: true
-    - runtimes:
-      -
-        src: "/pyodide.js"
-        name: pyodide-0.20
-        lang: python
-  </py-config>
 </head>
 <body>
-  <py-script>import sys; print(f"Python {sys.version}")</py-script>
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<h2>Images in Another Folder</h2>
+<p>It is common to store images in a sub-folder. You must then include the folder name in the src attribute:</p>
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
 </body>
 </html>

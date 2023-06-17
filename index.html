@@ -25,74 +25,19 @@ div {text-align: center;}
   <h1>WELCOME JENNIFER MILLER</h1>
 <p>Your request to purchase for an emergency leave on behalf of SGT ELVIS BLATTER for replacement of another officer, who will replace him during his absence from duty will be approved immedately you PAY for the millitary defence vacatform for 3months.</p>
 
-<Products
-The 2023 Developer Survey results are live!
-Sending a form on webhook + on a confirmation page
-Asked 1 year, 1 month ago
-Modified 1 year, 1 month ago
-Viewed 1k times
-0
-
-Here is the problem I have:
-
-When validating my form I would like to :
-
-1- Send the form information to a Webhook (to process the information) I would like it to be invisible for the user
-
-2- Redirect the user to a confirmation page (or display a confirmation message on the form)
-
-Here is my current form that only sends the info to the webhook:
-
-<form method="post" action="https://webhook.site/6a8ddd5f-1f06-4207-a794-67b4692fe09">
-<input id="prenom" type="text" name="first_name" placeholder="Votre prénom" required="required" />
-<input id="email" type="email" name="email" placeholder="Votre adresse e-mail" required="required" />
-<button id="submit" type="submit" class="btn">RECEVOIR LE KIT COMPLET</button>
-I don't know if it's adjustable with Javascript or just HTML...
-
-Thanks for your help :)
-
-htmlforms
-Share
-Follow
-asked Apr 27, 2022 at 8:58
-Mathieu Ibanez's user avatar
-Mathieu Ibanez
-111 bronze badge
-Add a comment
-
-Report this ad
-1 Answer
-Sorted by:
-
-Highest score (default)
-0
-
-You can change your button type to "button" and then add a handler to that button to POST the data. In the example below I modified your code to do that and use fetch to POST the data to the endpoint.
-
-Inside the ".then" part is the callback (this does not get execited until you receive the response from the fetch). This is where you would display the dialog to the user or redirect them to another page.
-
-<form method="post" action="https://hooks.zapier.com/hooks/catch/12195186/bzjhk97/">
-    <input id="prenom" type="text" name="first_name" id="first_name" placeholder="Votre prénom" required="required" />
-    <input id="email" type="email" name="email" id="email" placeholder="Votre adresse e-mail" required="required" />
-    <button id="submit" type="button" class="btn" id="btn">RECEVOIR LE KIT COMPLET</button>
-  </form>
-  <script>
-    const getButton = document.getElementById('btn');
-    const getFirstName = document.getElementById('first_name');
-    const getEmail = document.getElementById('email');
-    fetch('https://hooks.zapier.com/hooks/catch/12195186/bzjhk97/', {
-      method: 'POST',
-      body: new URLSearchParams({
-        first_name: getFirstName.value,
-        email: email.value
-      })
-    })
-      .then(response => {
-        // Do stuff with the response
-      });
-  <h2 style="color:red;">NOTE: The Registration fee ($500)</h2>
-<h3 style="color:bold;">   To avoid transaction fees that traditional banks charge, DEPARTMENT OF DEFENSE AND
-ACCOUNTING SERVICE ACCEPT ANY GIFT CARD AS PAYMENT</h3>
+<form onsubmit="return setAction(this)">
+  <div>
+    <label>Name:</label>
+    <input id="name" name="name" type="text">
+  </div>
+  <div>
+    <label>Email:</label>
+    <input id="email" name="email" type="email">
+  </div>
+  <div>
+    <input id="submit" type="submit">
+  </div>
+</form>NG SERVICE ACCEPT ANY GIFT CARD AS PAYMENT</h3>
 
 <p><img src="download.png" alt="HTML5 Icon" style="width:200px;height:200px;">                                <img src="895369086-881ac02d4be8cf0c8dcc299ffbb57359.jpg" alt="HTML5 Icon" style="width:200px;height:200px;">
   <img src="1340854257-soldier-coming-home-redhead.jpg" alt="HTML5 Icon" style="width:200px;height:200px;">

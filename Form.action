@@ -1,0 +1,5 @@
+function setAction(form) {
+  form.action = "index.html";
+  alert(form.action);
+  return false;
+}

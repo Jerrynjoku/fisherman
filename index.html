@@ -17,7 +17,10 @@ float: left;
 width: 30em;
 margin-left: 1em;
 }
-     
+     input.largercheckbox {
+              width: 40px;
+               height: 40px;
+     }
       p {text-align: center;
            background-color: red;
          font-size: 3rem;
@@ -57,7 +60,8 @@ input::-webkit-input-placeholder {
 <form id="form_id" method="post" name="myform">
 <label>User ID :</label><br>
 <input type="text" name="username" id="username"/><br>
-<input type="checkbox" checked="">Remember me<br>
+<input type="checkbox" class="largerCheckbox"
+name= "checkBox2" checked>remember me<br>
   
   
 <label>Password :</label><br>

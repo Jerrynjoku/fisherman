@@ -1,134 +1,153 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-    <title>Login Page</title>
+<title>Javascript Login Form Validation</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="css/style.css"/>
+<!-- Include JS File Here -->
 </head>
+<style>
+  
+  
+      h1 {text-align: left;
+             color: black;
+             font-size: 4rem; }
+    label {
+width: 40px;
+height: 40px;
+margin-left: 5em;
+font-size: 3rem;
+}
+input[type=button] {
+    width: 15px;  height: 5px;
+  font-size: 40px;
+    color: white;
+    background: blue;
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+}
 
-<body>
+  input[type=login] {
+        font-size: 5rem; }
+  
+     input.largercheckbox {text-align: right;
+              width: 40px;
+               height: 40px;
+            font-size: 2rem;
+            margin-left: 3em;
+     }
+        .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} 
+  .button {width: 50%;}
+
+
+    input[type=text], input[type=password] {   
+        width: 60%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+      p {text-align: center;
+           background-color: crimson;
+         font-size: 70px;
+           Color: white;
+        width:950px;
+        height: 120px;}
+
+  input {
+    width: 450px;
+    padding: 0px 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 3;
+}
+      div {text-align: center;
+           text-align: left;
+           font-size: 24px;
+
+  }
+
+  div2 { font-size: 33px; 
+        text-align: left;
+        color: blue; }
+      footer {
+        text-align: center;
+        width: 950px;
+        height: 400px;
+         font-size: 45px;
+           Color: white;
+  padding: 2px;
+  background-color: DarkSalmon;
+}
+
+  
+   </style>
+
+  
+
+<div class="container">
+<div class="main">!
+
+  <h1>$6.800.000
+    Avaliable balance</h1>
+  
+   <p>Login to online banking </p>
+  <br>
+<form id="form_id" method="post" name="myform">
+<label>User ID</label><br>
+<input type="text" name="username" id="username"/><br>
+  <div>save this user ID</div>
+<input type="checkbox" class="largerCheckbox"
+name= "checkBox2" id="save this user ID">
+  
+  <br>
     
-  <style>
-      /* CSS properties */
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+  
+<label>Password</label><br>
+<input type="password" name="password" id="password"/>
+  <br>
+  <br>
+  <br>
+<br>
+
+  <input type="button" onClick="myFunction()"  value="■ Log In" class="button" style="width: 200px; height: 150px; onclick="validate()"; />
+ <script>
+    function myFunction() {
+      window.location.href = "index1.html";
     }
-
-    /* for username and password fields */
-    input[type=text],
-    input[type=password] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    /* login and cancel button */
-    button {
-      background-color: #329dd5;
-      border-color: black;
-      border-width: 2in;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      font-size: 25px
-    }
-
-    button:hover {
-      opacity: 0.8;
-    }
-
-    /* only for cancel button */
-    .cancelbtn {
-      width: auto;
-      padding: 9px 16px;
-      background-color: #f44336;
-    }
-
-    .container {
-      padding: 16px;
-    }
-
-    span.psw {
-      float: right;
-      padding-top: 16px;
-    }
-
-    /* for the background */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.4);
-      padding-top: 60px;
-    }
-
-    /* for the box */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto 20% auto;
-      border: 2px solid #888;
-      width: 80%;
-      border-color: #329dd5;
-    }
-
-    /* The Close Button properties (x) */
-    .close {
-      position: absolute;
-      right: 25px;
-      top: 0;
-      color: #000;
-      font-size: 35px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: red;
-      cursor: pointer;
-    }
-  </style>
-<!-- html code -->
-  <form class="modal-content" method="post">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
-
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit" formaction="FrontLogin.html">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color: #f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-  </div>
-
-  <script>
-    // Getting the modal
-    var modal = document.getElementById('id01');
   </script>
+  <br>
+  <br>
+  <br>
 
+  <div2>  Forget your Password ? </div2>
+  <br>
+</form>
+  <br>
+  <br>
+  <br>
+  <footer>  
+   Secure area<br>
+Privacy | Security| CA Opt-Out Preference Signals Honored<br>
+Bank of America, N.A. Member FDIC. Equal Housing Lender<br>
+Bank of America Corporation<br>
+    ©2023
+</footer>  
+</div>
+</div>
 </body>
-
 </html>

@@ -1,129 +1,306 @@
- <!DOCTYPE html>
-<html lang="en">
-    
-<head>
-    <meta charset="UTF-8">
-    <link rel='stylesheet' href='./style.css'>
-    <title>Account Page</title>
-</head>
 
-  <body>
-
-<style>
-    .button {
-      background-color: #000000;
-      color: white;
-      padding: 14px 28px;
-      font-size: 30px;
-      cursor: pointer;
-      text-align: left; 
-      border-radius: 15%;
-      position: absolute;
-      bottom: 10%;
-      right: 10%;
-    }
- .button2 {
-      color: black;
-     }
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reporting demo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/statement.css" />
+        <link rel="stylesheet" href="css/addendum.css" />
  
-
-.btn-group button { height: 100px; font-size: 50px;
-  background-color: #04AA6D; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-h1{ 
- font-size: 35px;
-   
-}
-h2 {
- font-size: 80px;
-color: black;
-
-}
- h3 {
-  font-size: 50px;
- }
- h4 {
-  font-size: 80px;
- }
- h5  {
-    font-size:  50px;
-  padding: 30px;
-  background-color:blue;
-     }
-
-table{  
-                     border-collapse: collapse;   
-           width: 90%;
-            font-size: 30px;
-          height: 150px;}
-      th,td{  
-        background-color: #528b8b;  
-        padding: 50px;  
-        }  
-</style>
+        <style type="text/css">
+            @page statement {
+                @bottom-right {
+                    content: "Page " counter(page) " of " target-counter(url("#end"), page);
+                }
+            }
+        </style>
+    </head>
  
-
- id='accBody'>
-    <section id='accountNav'>
-    <nav>
-    <h1>Welcome <br>Elvis blatter</h1><br>
- <form action="index.html">
-    <button type="submit" class="button">Sign Out </button>
- </form>
-<h2>SPRINGS BANK </h2>
-<div class="btn-group" style="width:100%" height: 100px">
- <form>
-         <button type="submit" formaction="index.html">Account</button>
-  <button style="width:300px" formaction= "index.html">Dashboard </button>
-</form>
-  <button style="width:300px" height 50px">Dashboard</button>
-  
-</div>
-
-    <h3>Account Balances </h3>
-     <h5>Savings-6525           $1.800.000</h5>
-
-
-      <button style="width:300px" height 50px">Dashboard</button>
-  
-
-     <table>
-  <tr>
-    <th>Month</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Savings -6525</td>
-   <td>$100</td>
-    <td>Regular Checking </td> 
-    <td>$80</td>
-   <td>Platinum Plus Visa Card </td>
-   <td>$800.000td</td>
-  </tr>
+    <body lang="en">
+         
+            <article>
+    <section class="statement">
+        <div>
+    <div class="footer">
+        <div>ZOPYX Global Enterprise<br/>Phone: (+49) 7071 793376, Fax: (+49) 7071 793376,  Website: www.zopyx.com<br />Email: info@zopyx.com</div>
+    </div>
+ 
+    <div class="head1-left">
+        <!--
+            <img src="logo.png" />
+        -->
+        <img src="assets/LogoSizingSample.png" />
+    </div>
+ 
+    <div class="head1-right">
+        <div class="head-title">Statement of Account</div>
+        <div class="head-date">January 01, 2019 to March 31, 2019</div>
+    </div>
+ 
+    <div class="head2-left">
+        <div class="sequence-number">000024</div>
+        <div>HHKO MFIU</div>
+        <div>2888 XMYVFEJ FI</div>
+        <div>AXYDTPL QP  G4I 2U8</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+ 
+    <div class="head2-right">
+        <div class="advisor-title" xpath=".//YFAS_TITLE">Your Financial Advisor</div>
+        <div class="advisor-outer">
+            <div class="advisor">
+                <div>JOHN SMITH</div>
+                <div>BIG BUSINESS INC</div>
+                <div>123 ARLINGTON ST</div>
+                <div>NANAIMO BC B1A 2CB</div>
+                <div></div>
+                <div></div>
+                <div>Telephone Number</div>
+                <div>(299)  555-1234</div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="spacer">&nbsp;</div>
+ 
+    <div class="two-tables">
+        <table class="accounting table-left">
+    <caption>
+        <span>Investor Information</span>
+    </caption>
+    <thead>
+        <tr class="headers">
+            <th class="text-left">Account Type</th>
+            <th class="text-left">Account Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="headers border-bottom" >
+            <td class="text-left text-10 bold">Self-Directed Tax Free Savings Acct</td>
+            <td class="text-left text-10 bold">19570</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        
+            <tr class="border-bottom">
+                <td colspan="2">
+                    <div class="text-left bold">Administrator Account Number</div>
+                    <div class="text-left">N1F4011Q</div>
+                    These investments are registered in the name of FIDELITY CLEARING CANADA ULC on your behalf.
+                </td>
+            </tr>
+        
+        
+        
+    </tfoot>
 </table>
-
-
-</body>
-</head>
+        <table class="accounting table-right">
+    <caption>
+        <span>Account Value</span>
+    </caption>
+    <tbody>
+        <tr class="border-bottom">
+            <td class="text-left text-10">
+              Closing Market Value This<br />Period
+            </td>
+            <td class="text-right text-10">
+              $7,047.73
+            </td>
+        </tr>
+        <tr class="border-bottom">
+            <td class="text-left">
+              Opening Balance
+            </td>
+            <td class="text-right">
+              $6,070.12
+            </td>
+        </tr>
+        <tr class="border-bottom">
+            <td class="text-left">
+              Book Cost
+            </td>
+            <td class="text-right">
+              $6,390.75
+            </td>
+        </tr>
+    </tbody>
+</table>
+        <div style="clear: both"></div>
+    </div>
+ 
+    <table class="accounting account-summary">
+    <caption>
+        <span>Account Summary</span>
+    </caption>
+    <thead>
+        <tr class="headers border-bottom">
+            <th class="text-left">Fund Name</th>
+            <th class="text-center">DSC</th>
+            <th class="text-right">Book<br />Cost ($)</th>
+            <th class="text-right">Average<br />Cost ($)</th>
+            <th class="text-right">Unit<br />Balance</th>
+            <th class="text-right">Unit<br />Price ($)</th>
+            <th class="text-right">Market<br />Value ($)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-bottom">
+            <td colspan="7" class="text-7 text-left">Canadian $ Investments</td>
+        </tr>
+        
+        <tr class="border-bottom">
+            <td class="text-left">ACEME Small Cap Fund Series F ACM401</td>
+            <td class="text-center">N</td>
+            <td class="text-right">6,390.75</td>
+            <td class="text-right">15.9821</td>
+            <td class="text-right">399.869</td>
+            <td class="text-right">17.6251</td>
+            <td class="text-right">7,047.73</td>
+        </tr>
+        <tr class="border-bottom">
+            <td class="text-left" colspan="2"></td>
+            <td class="text-right" colspan="1"></td>
+            <td class="text-right" colspan="4"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="text-7" colspan="7">"<b>Book cost</b>" means the total amount paid to purchase an investment, including any transaction charges related to the purchase, adjusted for reinvested distributions, return of capital and corporate reorganizations.<br />The book (original) cost shown in this statement may not be suitable for income tax purposes, as it may not reflect all required adjustments. It is important for you to keep records of all of your investment transactions and consult your income tax advisor to properly determine your gains and losses for income tax purposes.<br /><br />"<b>Market value</b>" is the price at which an investment can be sold on the open market at a specific point in time. The market value of an investment fund is its<br />"<b>Net Asset Value</b>". This is usually calculated by investment managers once per day/week/month.</td>
+        </tr>
+    </tfoot>
+</table>
+ 
+    
+ 
+    
+ 
+    <table class="accounting transaction-summary">
+    <caption>
+        <span>Transaction Summary</span>
+    </caption>
+    <thead>
+        <tr class="headers">
+            <th class="text-left">Fund Name</th>
+            <th class="text-right">Purchases &<br />Transfers-In ($)</th>
+            <th class="text-right">Redemptions &<br />Transfers-Out ($)</th>
+            <th class="text-right">Income<br />Distribution ($)</th>
+            <th class="text-right">Capital Gain<br />Distribution ($)</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr class="border-bottom">
+                <td class="text-7 text-left">ACEME Small Cap Fund Series F ACM401</td>
+                <td class="text-7 text-right">0.00</td>
+                <td class="text-7 text-right">0.00</td>
+                <td class="text-7 text-right">0.00</td>
+                <td class="text-7 text-right">217.65</td>
+            </tr>
+        
+    </tbody>
+    <tfoot>
+        <tr class="border-bottom">
+            <td class="text-7" colspan="5">Any switch activity within your account is reported in the transaction details section of your statement.</td>
+        </tr>
+    </tfoot>
+</table>
+    <table class="accounting transaction-details layout-fixed">
+    <caption>
+        <span>Transaction Details</span>
+    </caption>
+    <thead>
+        <tr class="headers">
+            <th class="text-left">Trade Date</th>
+            <th class="text-left" style="width: 25%">Transaction Type</th>
+            <th class="text-right">Gross<br />Amount ($)</th>
+            <th class="text-right">Deductions<br />Amount ($)</th>
+            <th class="text-right">Net<br />Amount ($)</th>
+            <th class="text-right">Unit<br />Price ($)</th>
+            <th class="text-right">Transaction<br />Units</th>
+            <th class="text-right">Unit<br />Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+ 
+        
+            <tr>
+                <td colspan="8" class="text-10 bold extra-top-padding extra-bottom-padding">ACME Small Cap Fund Series F ACM401</td>
+            </tr>
+            
+ 
+                
+                    <tr class="border-bottom">
+                        <td colspan="7" class="text-left" >
+                            <span class="footnote-marker"> </span>
+                            Opening Balance
+                        </td>
+                        <td class="text-right">387.491</td>
+                    </tr>
+                
+            
+ 
+                
+                    <tr class="border-bottom">
+                        <td class="text-left" >
+                            <span class="footnote-marker"> </span>
+                            02/27/2019
+                        </td>
+                        <td class="text-left">Capital Gain Distribution</td>
+                        <td class="text-right">217.65</td>
+                        <td class="text-right">0.00</td>
+                        <td class="text-right">217.65</td>
+                        <td class="text-right">17.5834</td>
+                        <td class="text-right">12.378</td>
+                        <td class="text-right">399.869</td>
+                    </tr>
+ 
+                
+            
+ 
+                
+                    <tr class="border-top border-bottom">
+                        <td colspan="7" class="text-left" >
+                            <span class="footnote-marker"> </span>
+                            Closing Balance
+                        </td>
+                        <td class="text-right">399.869</td>
+                    </tr>
+                
+            
+        
+    </tbody>
+    <tfoot>
+        <tr class="">
+            <td class="text-7" colspan="8"></td>
+        </tr>
+    </tfoot>
+</table>
+ 
+    <div>Please review your statement of account carefully.  If there is any information that does not match your records, contact your Financial Advisor or our Client Services department within 60 days.</div>
+    <div></div>
+    <div></div>
+ 
+</div>
+        <div id="end"></div>
+    </section>
+ 
+    
+ 
+ 
+    <!-- MAT.PDF as two images
+    <div class="addendum-images">
+        <img src="MAT_INSERT_20190331_V1-0.png"/>
+        <img src="MAT_INSERT_20190331_V1-1.png"/>
+    </div>
+    -->
+ 
+</article> 
+        
+    </body>
 </html>
+

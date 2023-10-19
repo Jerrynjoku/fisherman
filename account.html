@@ -74,6 +74,16 @@ table{
         background-color: #528b8b;  
         padding: 10px;  
         }  
+input[type=button] {
+    width: 15px;  height: 5px;
+  font-size: 40px;
+    color: white;
+    background: blue;
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+}
+
+ 
 </style>
  
 
@@ -110,7 +120,12 @@ table{
       </tr>
 </table>
 
-
+  <input type="button" onClick="myFunction()"  value="■ Log In" class="button" style="width: 200px; height: 150px; onclick="validate()"; />
+ <script>
+    function myFunction() {
+      window.location.href = "account.html";
+    }
+  </script>
 </body>
 </head>
 </html>

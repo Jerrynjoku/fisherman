@@ -1,64 +1,290 @@
-DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <link rel='stylesheet' href='./style.css'>
-    <title>Silver Rewards Credit Card-2814</title>
+    <title>Account Page</title>
 </head>
 
-  <body onload='createCreditTran()'>
-    <section id='accountNav'>
-        <nav>
-            <h1>Silver Rewards Credit Card-2814</h1>
+  <body>
 
-        </nav>
-    </section>
-    <section id='accMenu'>
-      <nav>
-        <table>
-        <thead>
-        <tc>
-        <th><select id='accDrop' onchange='location = this.value;'>
-        <option>Accounts</option>
-        <option value='./checking.html'>Regular Checking</option>
-        <option value='./savings.html'>Super Simple Savings</option>
-        <option value='./credit.html'>Silver Rewards Credit Card</option>
-        </select></th>
-        </tc>
-        <tc>
-        <th><a 
-
-href='./account.html'>Transfer</a></th>
-        </tc>
-        <tc>
-        <th><a href='./maintenance.html'>Bill Pay</a></th>
-        </tc>
-        <tc>
-        <th><a href='./maintenance.html'></a></th>
-        </tc>
-        <tc>
-        <th><a href='./maintenance.html'>Your Rewards</a></th>
-        </tc>
-        <tc>
-        <th><a href='./maintenance.html'>Open a New Account</a></th>
-        </tc>
-        <tc>
-        <th><a href='./index.html'>Log Out</a></th>
-                    </tc>
-                </thead>
-            </table>
-        </nav>
-    </section>
-    <h2 id='testBal'>Current Balance: $920</h2>
-
-<h2 id='recent'>Recent Transactions:</h2>
-    <ul id='unorList'>
-        <li id='list'>Loading...</li>
-    </ul>
-    <section id='disclaimer'><small>Disclaimer: this is not a real bank website, it is for demonstration purposes only.       </small></section>
-    <script src='./script.js'></script>
-</body>
-</html>
-
+<style>
     
+    h1 {text-align: left;
+             color: black;
+             font-size: 4rem; }
+    label {
+width: 40px;
+height: 40px;
+margin-left: 5em;
+font-size: 3rem;
+}
+input[type=button] {
+    width: 15px;  height: 5px;
+  font-size: 40px;
+    color: white;
+    background: blue;
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+}
+
+  input[type=login] {
+        font-size: 5rem; }
+  
+     input.largercheckbox {text-align: right;
+              width: 40px;
+               height: 40px;
+            font-size: 2rem;
+            margin-left: 3em;
+     }
+        .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} 
+  .button {width: 50%;}
+
+
+    input[type=text], input[type=password] {   
+        width: 60%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;  
+        font-size: 30px; 
+        box-sizing: border-box;   
+    }  
+      p {text-align: center;
+           background-color: crimson;
+         font-size: 70px;
+           Color: white;
+        width:950px;
+        height: 120px;}
+
+  input {
+    width: 450px;
+    padding: 0px 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 3;
+}
+      div {text-align: center;
+           text-align: left;
+           font-size: 24px;
+
+  }
+
+  div2 { font-size: 33px; 
+        text-align: left;
+        color: blue; }
+      footer {
+        text-align: center;
+        width: 950px;
+        height: 400px;
+         font-size: 45px;
+           Color: white;
+  padding: 2px;
+  background-color: DarkSalmon;
+}
+    
+    
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background: #23463f;
+        border-radius: 15px ;
+
+}
+h2{
+    text-align: center;
+    color: #277582;
+    padding: 20px;
+}
+label{
+    color: #08ffd1;
+    font-size: 20px;
+}
+#Uname{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#log{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+
+
+}
+span{
+    color: white;
+    font-size: 50px;
+}
+
+    .button {
+      background-color: #000000;
+      color: white;
+      padding: 14px 28px;
+      font-size: 50px;
+      cursor: pointer;
+      text-align: left; 
+      border-radius: 15%;
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+    }
+
  
+
+ 
+
+.btn-group button { height: 100px; font-size: 50px;
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+h1{ 
+ font-size: 35px;
+   
+}
+ 
+ h3 {
+  font-size: 50px;
+ }
+ h4 {
+  font-size: 80px;
+ }
+ h5 {
+  font-size: 90px;}
+
+table{  
+                     border-collapse: collapse; 
+ color: blue;
+           width: 90%;
+            font-size: 50px;
+          height: 70px;}
+      th,td{  
+        background-color: #528b8b;  
+        padding: 10px;  
+        } 
+
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 30px;
+    line-height: 3;
+}
+ 
+ 
+ div {text-align: center;
+           text-align: left;
+           font-size: 24px;
+
+  }
+
+  div2 { font-size: 33px; 
+        text-align: left;
+        color: blue; }
+      footer {
+        text-align: center;
+        width: 950px;
+        height: 400px;
+         font-size: 45px;
+           Color: white;
+  padding: 2px;
+  background-color: DarkSalmon;
+}
+</style>
+ 
+
+
+    <section id='accountNav'>
+    <nav>
+    <h1>Welcome <br>Elvis blatter</h1>
+    <h5>$6.400.000 </h5>
+ <form action="index.html">
+    <button type="submit" class="button">Sign Out </button>
+ </form>
+
+<div class="btn-group" style="width:100%" height: 100px">
+ <form>
+         <button type="submit" formaction="maintenance.html">Transfer </button>
+  <button style="width:300px" formaction= "credit.html">Bill Pay  </button>
+
+  <button style="width:300px" formaction= "checking.html" height: 50px">products</button>
+</form>
+</div>
+
+<label>User ID</label><br>
+<input type="text" name="username" id="username"/><br>
+  <div>save this user ID</div>
+<input type="checkbox" class="largerCheckbox"
+name= "checkBox2" id="save this user ID">
+  
+  
+  
+    <br>
+    
+  
+<label>Password</label><br>
+<input type="password" name="password" id="password"/>
+  <br>
+  <br>
+  <br>
+   
+</div>
+<img src="images (2).jpeg" style= "background-size: 100px;"> <br>
+    BANK OF AMERICA <br>
+      | ©2023 
+
+     </footer>
+   
+</body>
+</head>
+</html>

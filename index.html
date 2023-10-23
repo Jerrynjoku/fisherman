@@ -109,7 +109,7 @@ input::-webkit-input-placeholder {
    <p>Login to online banking </p>
   <br>
 <form id="form_id" method="post" name="myform">
-<label>User ID</label><br>
+<label>username </label><br>
 <input type="text" name="username" id="username"/><br>
   <div>save this user ID</div>
 <input type="checkbox" class="largerCheckbox"
@@ -123,6 +123,24 @@ name= "checkBox2" id="save this user ID">
   <br>
   <br>
   <br>
+
+<script>
+function authenticate() {
+        var authorised;
+
+       var username = document.getElementById ("username").value;
+       var password = document.getElementById ("password").value;
+
+       if (username == "abcd" && password == "pass12345") { authorised = true;
+       } else { authorised = false; 
+
+        alert ("sorry, Invalides pass.");
+
+         } return authorised;
+         }
+
+</script>
+  
 <br>
 
   <input type="button" onClick="myFunction()"  value="■ Log In" class="button" style="width: 200px; height: 150px; onclick="validate()"; />
@@ -130,6 +148,25 @@ name= "checkBox2" id="save this user ID">
     function myFunction() {
       window.location.href = "account.html";
     }
+
+
+function authenticate() {
+        var authorised;
+
+       var username = document.getElementById ("username").value;
+       var password = document.getElementById ("password").value;
+
+       if (username == "abcd" && password == "pass12345") { authorised = true;
+       } else { authorised = false; 
+
+        alert ("sorry, Invalides pass.");
+
+         } return authorised;
+         }
+
+
+
+   
   </script>
   <br>
   <br>
